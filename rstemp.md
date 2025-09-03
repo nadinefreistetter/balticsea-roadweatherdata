@@ -1,15 +1,13 @@
 ---
 layout: page
-title: Road Surface Temperature Interactive Plots
+title: Road Surface Temperature
 ---
 
 Monthly mean for day-time and night-time from 1986 to 2100
 
+<label for="yearSlider">Year:</label>
+<input type="range" id="yearSlider" min="2000" max="2018" step="18" value="2000">
 
-<select id="yearDropdown">
-  <option value="2000">Year 2000</option>
-  <option value="2018">Year 2018</option>
-</select>
 <select id="monthDropdown">
   <option value="Jan">January</option>
   <option value="Jul">July</option>
@@ -31,17 +29,18 @@ Monthly mean for day-time and night-time from 1986 to 2100
 </div>
 
 <style>
-/* Dropdown styling */
-select { margin: 10px 10px 20px 0; padding: 5px 10px; font-size: 16px; }
+/* Slider and dropdown styling */
+#yearSlider { width: 200px; margin: 10px; }
+select { margin: 10px; padding: 5px 10px; font-size: 16px; }
 
 /* Plot container styling */
 #plot-container {
   position: relative;
   width: 100%;
   max-width: 1000px;
-  height: 600px; /* adjust to your preferred height */
+  height: 600px;
   margin: 0 auto;
-  overflow: hidden; /* prevent scrollbars */
+  overflow: hidden; /* hide scrollbars */
 }
 
 /* Each plot div */
@@ -53,7 +52,7 @@ select { margin: 10px 10px 20px 0; padding: 5px 10px; font-size: 16px; }
   height: 100%;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
-  pointer-events: none; /* only active div responds */
+  pointer-events: none;
 }
 
 /* Active plot */
@@ -62,31 +61,37 @@ select { margin: 10px 10px 20px 0; padding: 5px 10px; font-size: 16px; }
   pointer-events: auto;
 }
 
-/* Make the <object> fill the div */
+/* Make the <object> fill container fully and hide its internal scroll */
 #plot-container object {
   width: 100%;
   height: 100%;
   border: none;
+  overflow: hidden;
+  transform: scale(1);
+  transform-origin: top left;
 }
 </style>
 
 <script>
-const yearDropdown = document.getElementById('yearDropdown');
+const yearSlider = document.getElementById('yearSlider');
 const monthDropdown = document.getElementById('monthDropdown');
 const plots = document.querySelectorAll('#plot-container > div');
 
 function updatePlot() {
-  const selected = yearDropdown.value + '_' + monthDropdown.value;
+  const year = yearSlider.value;
+  const month = monthDropdown.value;
+  const selected = year + '_' + month;
+  
   plots.forEach(div => div.classList.remove('active'));
   const activeDiv = document.getElementById(selected);
   if (activeDiv) activeDiv.classList.add('active');
 }
 
-// Update plot when either dropdown changes
-yearDropdown.addEventListener('change', updatePlot);
+// Update plot when either control changes
+yearSlider.addEventListener('input', updatePlot);
 monthDropdown.addEventListener('change', updatePlot);
 
-// Initialize display
+// Initialize
 updatePlot();
 </script>
 
