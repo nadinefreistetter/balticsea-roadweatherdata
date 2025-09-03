@@ -1,25 +1,15 @@
 ---
 layout: page
-title: Road Surface Temperature
+title: Road Surface Temperature Interactive Plots
 ---
 
 Monthly mean for day-time and night-time from 1986 to 2100
 
 
-<iframe src="MeanRST_2000_Jan_day.html" width="900" height="700"></iframe> 
-
-
-
-
-
-
-# RST Interactive Plots
-
 <select id="yearDropdown">
   <option value="2000">Year 2000</option>
   <option value="2018">Year 2018</option>
 </select>
-
 <select id="monthDropdown">
   <option value="Jan">January</option>
   <option value="Jul">July</option>
@@ -27,23 +17,57 @@ Monthly mean for day-time and night-time from 1986 to 2100
 
 <div id="plot-container">
   <div id="2000_Jan" class="active">
-    <object type="text/html" data="MeanRST_2000_Jan_day.html" style="width:100%; height:600px;"></object>
+    <object type="text/html" data="MeanRST_2000_Jan_day.html"></object>
   </div>
   <div id="2000_Jul">
-    <object type="text/html" data="MeanRST_2000_Jul_day.html" style="width:100%; height:600px;"></object>
+    <object type="text/html" data="MeanRST_2000_Jul_day.html"></object>
   </div>
   <div id="2018_Jan">
-    <object type="text/html" data="MeanRST_2018_Jan_day.html" style="width:100%; height:600px;"></object>
+    <object type="text/html" data="MeanRST_2018_Jan_day.html"></object>
   </div>
   <div id="2018_Jul">
-    <object type="text/html" data="MeanRST_2018_Jul_day.html" style="width:100%; height:600px;"></object>
+    <object type="text/html" data="MeanRST_2018_Jul_day.html"></object>
   </div>
 </div>
 
 <style>
-#plot-container > div { display: none; }
-#plot-container > div.active { display: block; }
+/* Dropdown styling */
 select { margin: 10px 10px 20px 0; padding: 5px 10px; font-size: 16px; }
+
+/* Plot container styling */
+#plot-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 600px; /* adjust to your preferred height */
+  margin: 0 auto;
+  overflow: hidden; /* prevent scrollbars */
+}
+
+/* Each plot div */
+#plot-container > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none; /* only active div responds */
+}
+
+/* Active plot */
+#plot-container > div.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Make the <object> fill the div */
+#plot-container object {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 </style>
 
 <script>
@@ -66,8 +90,3 @@ monthDropdown.addEventListener('change', updatePlot);
 updatePlot();
 </script>
 
-dropdown.addEventListener('change', () => {
-  plots.forEach(div => div.classList.remove('active'));
-  document.getElementById(dropdown.value).classList.add('active');
-});
-</script>
