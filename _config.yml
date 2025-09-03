@@ -2,8 +2,8 @@ title: Road Surface Model Runs
 description: IBA-Cristal
 theme: minima
 header_pages:
-  - index.md       # maps to index.md
-  - rstemp.md      # maps to rstemp.md
-  - snowdepth.md   # maps to snowdepth.md
-  - waterdepth.md  # maps to waterdepth.md
-  - freezethaw.md  # maps to freezethaw.md
+  - index
+  - rstemp
+  - snowdepth
+  - waterdepth
+  - freezethaw
