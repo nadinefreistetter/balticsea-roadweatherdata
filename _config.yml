@@ -4,3 +4,4 @@ theme: minima
 header_pages:
   - index.md
   - rstemp.md
+  - snowdepth.md
