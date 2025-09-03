@@ -2,5 +2,5 @@ title: Road Surface Model Runs
 description: IBA-Cristal
 theme: minima
 header_pages:
-  - index
-  - rstemp
+  - index.md
+  - rstemp.md
