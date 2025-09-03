@@ -3,6 +3,6 @@ description: Freistetter N.C. et al.
 theme: minima
 header_pages:
   - index.md
-  - Snow Storage Depth.md
-  - Road Surface Temperature.md
+  - snowdepth.md
+  - rstemp.md
   
