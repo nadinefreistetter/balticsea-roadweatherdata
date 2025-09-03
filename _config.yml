@@ -4,6 +4,3 @@ theme: minima
 header_pages:
   - index
   - rstemp
-  - snowdepth
-  - waterdepth
-  - freezethaw
