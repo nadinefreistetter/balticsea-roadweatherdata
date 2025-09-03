@@ -2,13 +2,8 @@ title: Road Surface Model Runs
 description: IBA-Cristal
 theme: minima
 header_pages:
-  - index.md
-  - rstemp.md
-  - snowdepth.md
-  - waterdepth.md
-  - freezethaw.md
-  
-Test text ...
-Is this displaying somewhere?
-
-  
+  - index       # maps to index.md
+  - rstemp      # maps to rstemp.md
+  - snowdepth   # maps to snowdepth.md
+  - waterdepth  # maps to waterdepth.md
+  - freezethaw  # maps to freezethaw.md
