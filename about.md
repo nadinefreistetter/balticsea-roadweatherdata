@@ -19,18 +19,20 @@ This stakeholder-focused research was funded by ...
 • ...
 
 
-# How to cite
-Cite the report ...
-
 
 # Data Sources
 Results shown here are generated with regional climate and energy balance models and standardized future climate change scenarios (representative concentration pathways) at the Finnish Meteorological Institute and its collaborators. Each results page harbours more information on the correpsonding results' specific sources.
 
 
-# Corresponding Publications & Further Reading
+# How to cite
+Cite the report ...
+
+
+# Further Reading
 
 ...
-...
+
+
 
 Page created: 09-2025 
 
