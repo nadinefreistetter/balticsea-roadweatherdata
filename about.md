@@ -12,9 +12,11 @@ This stakeholder-focused research was funded by ...
 
 # Team
 
-• 
-• 
-• 
+• ...
+
+• ...
+
+• ...
 
 
 # How to cite
@@ -27,7 +29,8 @@ Results shown here are generated with regional climate and energy balance models
 
 # Corresponding Publications & Further Reading
 
-
+...
+...
 
 Page created: 09-2025 
 
