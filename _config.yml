@@ -3,6 +3,7 @@ description: IBA-Cristal
 theme: minima
 header_pages:
   - index.md
+  - about.md
   - rstemp.md
   - freezethaw.md
   - waterdepth.md
