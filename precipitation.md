@@ -1,7 +1,12 @@
 ---
 layout: page 
-title: Summer-time Precipitation
+title: Precipitation
 ---
+
+
+# Summer-time Precipitation
+
+This is a description text lalala. 
 
 <iframe src="Mean_Max_Daily_Precip_JJA_RCP45.html" 
         width="100%" 
