@@ -1,7 +1,11 @@
 ---
 layout: page 
-title: Road Surface Temperature
+title: Summer-time Precipitation
 ---
 
-
+<iframe src="Mean_Max_Daily_Precip_JJA_RCP45.html" 
+        width="100%" 
+        height="600px" 
+        style="border:none;">
+</iframe>
 
